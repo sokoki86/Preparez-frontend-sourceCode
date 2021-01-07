@@ -1,0 +1,37 @@
+.recipe_container {
+    flex: 4;
+    text-align: center; 
+    margin: 50px 50px;
+  }
+  .recipe_box {
+      border-width: 2px;
+      border-style: solid;
+      border-color: #83C5BE;
+      background-color: #83C5BE;
+      border-radius: 30px;
+      margin: 50px 50px;
+      color:  #EDF6F9;
+      box-shadow: 5px 10px #D6D2D2;
+      width: 500px;
+      height: 250px;
+      overflow-y: scroll;
+      
+  }
+  .recipe {
+      background-color: #EDF6F9;
+  }
+  .listItems {
+      margin: 10px 20px;
+  }
+  .searchbox {
+      text-align: center;
+  }
+  button {
+      height: 30px;
+      width: 80px;
+      border-radius: 30px;
+  }
+
+  h3 {
+      text-align: center;
+  }

@@ -1,0 +1,11 @@
+main {
+    width: 95%;
+    max-width: 120rem;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    background-color: #EDF6F9;
+  }
+  .image{
+    float: right;
+  }

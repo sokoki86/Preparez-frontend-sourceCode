@@ -1,0 +1,24 @@
+.form_box {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #83C5BE;
+    background-color: #83C5BE;
+    border-radius: 30px;
+    margin: 50px 50px;
+    color:  #EDF6F9;
+    box-shadow: 5px 10px #D6D2D2;
+    
+}
+.recipe_box {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #83C5BE;
+    background-color: #83C5BE;
+    border-radius: 30px;
+    margin: 50px 50px;
+    width: 500px;
+    height: 410px;
+    color:  #EDF6F9;
+    box-shadow: 5px 10px #D6D2D2;
+    
+}
