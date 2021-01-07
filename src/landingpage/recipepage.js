@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-importRECIPES from './recipes';
+import RECIPES from './recipes';
 import { getAllRecipes, getSearchRecipes, deleteRecipe } from '../auth/authCrud';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./recipepage.css"
 import RecipeBox from "./createRecipebutton"
 import { Redirect } from "react-router-dom";
-import RecipeCard from './recipeCard';
 import { debounce } from 'lodash'
-import { Modal } from 'react-bootstrap'
-import { Button } from 'react-bootstrap'
 class RecipePage extends Component {
     constructor(props) {
         super(props);
