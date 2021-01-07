@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import RECIPES from './recipes';
+importRECIPES from './recipes';
 import { getAllRecipes, getSearchRecipes, deleteRecipe } from '../auth/authCrud';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -16,7 +16,7 @@ class RecipePage extends Component {
         super(props);
         console.log(props);
         this.state = {
-            RECIPES: [],
+           RECIPES: [],
             showDetail: false,
             recipe: {},
             show:false
@@ -71,10 +71,13 @@ class RecipePage extends Component {
     handleClose(){this.setState({show:false});}
     handleShow(){ this.setState({show:true});}
     componentDidMount() {
+        fetch('https://serene-mesa-65774.herokuapp.com/')
+        .then(response => response.json())
+        
         getAllRecipes().then(res => {
             console.log(res);
             this.setState({
-                RECIPES: res.data
+               RECIPES: res.data
             })
         })
     }
@@ -83,7 +86,7 @@ class RecipePage extends Component {
             getSearchRecipes(e.target.value).then(res => {
                 console.log(res);
                 this.setState({
-                    RECIPES: res.data
+                   RECIPES: res.data
                 })
             })
         }
@@ -91,7 +94,7 @@ class RecipePage extends Component {
             getAllRecipes().then(res => {
                 console.log(res);
                 this.setState({
-                    RECIPES: res.data
+                   RECIPES: res.data
                 })
             })
         }
@@ -105,7 +108,7 @@ class RecipePage extends Component {
                 getAllRecipes().then(res => {
                     console.log(res);
                     this.setState({
-                        RECIPES: res.data
+                       RECIPES: res.data
                     })
                 })
                 toast.success("Recipe Deleted Successfully!");
@@ -154,7 +157,7 @@ class RecipePage extends Component {
                     </form>
                     <div>
                         <ul className="recipelist">
-                            {this.state.RECIPES.map(recipe =>
+                            {this.state.recipes.map(recipe =>
                                 <li className="listItems" key={recipe.recipe_id}>
                                     <a onClick={(e) => this.getRecipe(recipe)} style={{ color: 'blue', cursor: 'pointer' }} >
                                         {recipe.recipe_name} {recipe.recipe_preptime}

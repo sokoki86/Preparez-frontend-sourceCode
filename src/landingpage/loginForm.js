@@ -17,6 +17,10 @@ class LoginForm extends Component {
           redirect:false
         };
       }
+      componentDidMount() {
+        fetch('https://serene-mesa-65774.herokuapp.com/')
+        .then(response => response.json())
+      }
 
      onChangeForm(e){
          console.log('OnChnageeee');
