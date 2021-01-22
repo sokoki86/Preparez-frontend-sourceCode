@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Route } from 'react-router-dom';
-// import food from './landingpage.jpg';
+import food from './landingpage.jpg';
 import Header from './header'
 import LoginForm from './loginForm'
 import NewUserForm from './newuserform'
@@ -19,7 +19,7 @@ class LandingPage extends Component {
       <div className="App">
         <Header/>
       
-      <main className='main'>
+      <main className='main' style={{ backgroundImage:`url(${food})`}}>
         <Route exact path='/' component={LoginForm} />
         <Route path='/newuser' component={NewUserForm} />
         <Route path='/recipePage' component={RecipePage} />

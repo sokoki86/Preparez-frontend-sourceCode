@@ -12,14 +12,13 @@
       margin: 50px 50px;
       color:  #EDF6F9;
       box-shadow: 5px 10px #D6D2D2;
-      width: 500px;
       height: 250px;
       overflow-y: scroll;
       
   }
-  .recipe {
+  /* .recipe {
       background-color: #EDF6F9;
-  }
+  } */
   .listItems {
       margin: 10px 20px;
   }
