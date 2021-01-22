@@ -130,7 +130,7 @@ class EditRecipeForm extends Component {
                     <button type="submit">Update Recipe</button>
                     <br/>
                     <br/>
-                    <Link  to='/homepage'><button>Go Back</button></Link>
+                    <Link  to='/recipePage'><button>Go Back</button></Link>
                 </form>
                 </div>
             </div>

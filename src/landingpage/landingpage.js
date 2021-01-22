@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';import food from './landingpage.jpg';
+import { Route } from 'react-router-dom';import food from './landingpage.jpg';
 import Header from './header'
 import LoginForm from './loginForm'
 import NewUserForm from './newuserform'
@@ -21,8 +21,7 @@ class LandingPage extends Component {
       <main className='main'>
         <Route exact path='/' component={LoginForm} />
         <Route path='/newuser' component={NewUserForm} />
-        
-        <Route path='/homepage' component={RecipePage} />
+        <Route path='/recipePage' component={RecipePage} />
         <Route path='/newrecipe' component={CreateRecipeForm} />
         <Route path='/editrecipe' component={EditRecipeForm} />
         <Route path='/recipecard'  render={(props) => <RecipeCard {...props}/>} />

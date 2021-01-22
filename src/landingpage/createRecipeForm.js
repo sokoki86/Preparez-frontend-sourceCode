@@ -124,7 +124,7 @@ class CreateRecipeForm extends Component {
                     <button type="submit">Create Recipe</button>
                     <br/>
                     <br/>
-                    <Link  to='/homepage'><button>Go Back</button></Link>
+                    <Link  to='/recipePage'><button>Go Back</button></Link>
                 </form>
                 </div>
             </div>

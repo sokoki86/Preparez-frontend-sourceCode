@@ -1,5 +1,6 @@
-import React, {Component,useState} from 'react';
+import React, {Component, useState} from 'react';
 import './newUserForm.css';
+import {Link} from 'react-router-dom';
 import {register}  from '../auth/authCrud';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
@@ -40,17 +41,7 @@ class NewUserForm extends Component {
             })
           
         }
-        // else if (e.target.name === 'design') {
-        // //   setData({
-        // //     boothname: data.boothname,
-        // //     design:e.target.value,
-        // //     boothCompanyName: data.boothCompanyName,
-        // //     companyBackgroundParagraph: e.target.value,
-        // //     videoEmbeddedLink: data.videoEmbeddedLink,
-        // //     pdfFile: data.pdfFile
-        // //   })
-        // }
-        // setState({user})
+       
       }
       onSubmit(event){
         event.preventDefault();
@@ -63,7 +54,7 @@ class NewUserForm extends Component {
                 username:'',
                 password:''
               });
-              toast.success("Successfully Registed!");
+              toast.success("Successfully Registered!");
           },err=>{
             toast.error("User Already Exist/Server may be not Responding");
               console.log(err);
@@ -94,6 +85,9 @@ class NewUserForm extends Component {
                 <br/>
                 <br/>
                 <button type="submit" >Sign-Up</button>
+                <br/>
+                <br/>
+                <Link to='/'><button>Back to Login</button></Link>
                 </form>
                 </div>
             </div>

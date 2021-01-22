@@ -56,7 +56,7 @@ class LoginForm extends Component {
               }) 
               }, 1000);
               
-            //   history.push("/homepage");
+            //   history.push("/recipePage");
           },err=>{
             toast.error("Username or password is incorrect!");
               console.log(err);
@@ -67,7 +67,7 @@ class LoginForm extends Component {
         const redirect=this.state.redirect;
         if(redirect)
         {
-            return <Redirect  to='/homepage'/>
+            return <Redirect  to='/recipePage'/>
         }
 
         return(

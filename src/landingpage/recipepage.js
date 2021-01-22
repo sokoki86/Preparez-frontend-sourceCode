@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import RECIPES from './recipes';
 import { getAllRecipes, getSearchRecipes, deleteRecipe } from '../auth/authCrud';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./recipepage.css"
 import RecipeBox from "./createRecipebutton"
 import { Redirect } from "react-router-dom";
 import { debounce } from 'lodash'
+
+
 class RecipePage extends Component {
     constructor(props) {
         super(props);
         console.log(props);
         this.state = {
-           RECIPES: [],
+            RECIPES: [],
             showDetail: false,
             recipe: {},
             show:false
@@ -68,13 +69,10 @@ class RecipePage extends Component {
     handleClose(){this.setState({show:false});}
     handleShow(){ this.setState({show:true});}
     componentDidMount() {
-        fetch('https://serene-mesa-65774.herokuapp.com/')
-        .then(response => response.json())
-        
         getAllRecipes().then(res => {
             console.log(res);
             this.setState({
-               RECIPES: res.data
+                RECIPES: res.data
             })
         })
     }
@@ -83,7 +81,7 @@ class RecipePage extends Component {
             getSearchRecipes(e.target.value).then(res => {
                 console.log(res);
                 this.setState({
-                   RECIPES: res.data
+                    RECIPES: res.data
                 })
             })
         }
@@ -91,7 +89,7 @@ class RecipePage extends Component {
             getAllRecipes().then(res => {
                 console.log(res);
                 this.setState({
-                   RECIPES: res.data
+                    RECIPES: res.data
                 })
             })
         }
@@ -105,7 +103,7 @@ class RecipePage extends Component {
                 getAllRecipes().then(res => {
                     console.log(res);
                     this.setState({
-                       RECIPES: res.data
+                        RECIPES: res.data
                     })
                 })
                 toast.success("Recipe Deleted Successfully!");
@@ -143,7 +141,6 @@ class RecipePage extends Component {
         }
         return (
             <div className="recipe">
-                <ToastContainer />
                 <div className="recipe_box">
                     <h3><u>Recipes</u></h3>
                     <form className="searchbox">
@@ -154,15 +151,15 @@ class RecipePage extends Component {
                     </form>
                     <div>
                         <ul className="recipelist">
-                            {this.state.recipes.map(recipe =>
+                            {this.state.RECIPES.map(recipe =>
                                 <li className="listItems" key={recipe.recipe_id}>
                                     <a onClick={(e) => this.getRecipe(recipe)} style={{ color: 'blue', cursor: 'pointer' }} >
                                         {recipe.recipe_name} {recipe.recipe_preptime}
                                     </a>                <Link push to={{
                 pathname: "/editrecipe",
                 state: { data: recipe }
-            }}><button  style={{ width: '51px', backgroundColor: 'green', cursor: 'pointer' }}>Edit</button></Link>
-  <button onClick={(e) => this.deleteItem(recipe.recipe_id)} style={{ width: '51px', backgroundColor: 'red', cursor: 'pointer' }}>Delete</button>
+            }}><button  style={{ width: '51px', backgroundColor: '#EDF6F9', cursor: 'pointer' }}>Edit</button></Link>
+  <button onClick={(e) => this.deleteItem(recipe.recipe_id)} style={{ width: '51px', backgroundColor: '#EDF6F9', cursor: 'pointer' }}>Delete</button>
                                 </li>
                             )}
                         </ul>
@@ -170,7 +167,7 @@ class RecipePage extends Component {
                     </div><RecipeBox />
                 </div>
                 <Link push to="/"
-        ><button  onClick={()=>this.logout()} style={{ width: '80px',marginLeft:'250px', backgroundColor: 'red', cursor: 'pointer' }}>Log Out</button></Link>
+        ><button  onClick={()=>this.logout()} style={{ width: '80px',marginLeft:'250px', backgroundColor: '#83C5BE', cursor: 'pointer' }}>Log Out</button></Link>
             </div>
         )
     }

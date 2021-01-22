@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import RECIPES from './recipes';
 import {Link} from 'react-router-dom'
 
 import './recipeCard.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+
 class RecipeCard extends Component {
     constructor(props) {
         console.log(props);
@@ -12,12 +11,6 @@ class RecipeCard extends Component {
           singleRecipe: this.props.location.state.data
         };
       }
-    //   componentDidMount(props){
-    //       console.log(props);
-    //       this.setState({
-    //           singleRecipe:this.props.location.state.data
-    //       })
-    //     console.log("property_id",this.props.location.state.data);}
     render(){
         return(
             <div className="form-box">
@@ -30,7 +23,7 @@ class RecipeCard extends Component {
                     <span className="ml-1" style={{color:'#981313'}}><b>Category :</b> </span> <span className="badge badge-pill badge-primary"> {this.state.singleRecipe.category}</span>
                     <br></br>
                     <br></br>
-                    <Link  to='/homepage'><button style={{marginLeft:'35%'}}>Go Back</button></Link>
+                    <Link  to='/recipePage'><button style={{marginLeft:'35%'}}>Go Back</button></Link>
                 </div>
                 
 
