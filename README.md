@@ -1,6 +1,9 @@
 Preprez
 
 Preparez is a recipe sharing app that allows users to add, delete, and edit recipes shared with other users on the platform.
+For Demo purposes you can use the dummy user:
+username:Penny
+password:Happy
 
 A live link to this app can be found here
 https://preparez-frontend-source-code.vercel.app/
