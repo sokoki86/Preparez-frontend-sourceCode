@@ -2,10 +2,26 @@ main {
     width: 95%;
     max-width: 120rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 0 auto;
     background-color: #EDF6F9;
   }
-  .image{
+  /* .image{
     float: right;
+  } */
+/* small screens phones */
+  @media screen and (min-width: 620px){
+    .flex-container {
+      width: 500px;
+  }
+}
+  
+  /* large tablet & laptop styles */
+  @media screen and (min-width: 960px){
+  
+  }
+  
+  /* desktop styles */
+  @media screen and (min-width: 1200px){
+  
   }

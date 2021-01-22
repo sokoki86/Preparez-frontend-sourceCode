@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React, {Component} from 'react';
 import './newUserForm.css';
 import {Link} from 'react-router-dom';
 import {register}  from '../auth/authCrud';

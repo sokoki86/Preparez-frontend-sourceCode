@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import { Route } from 'react-router-dom';import food from './landingpage.jpg';
+import { Route } from 'react-router-dom';
+// import food from './landingpage.jpg';
 import Header from './header'
 import LoginForm from './loginForm'
 import NewUserForm from './newuserform'
@@ -25,7 +26,7 @@ class LandingPage extends Component {
         <Route path='/newrecipe' component={CreateRecipeForm} />
         <Route path='/editrecipe' component={EditRecipeForm} />
         <Route path='/recipecard'  render={(props) => <RecipeCard {...props}/>} />
-        <img className='image'src={food} alt="food" height={700} width={600}/>
+        {/* <img className='image'src={food} alt="food" height={700} width={600}/> */}
         </main>
       </div>
     );

@@ -12,7 +12,9 @@ class Header extends Component {
         return (
             <header>
                 <div className=" flex" style={{block:'inline-block'}}>
-                    <div className="col-6">                <h1>Preparez | Meal Planning App</h1>
+                    <div className="col-6">                
+                    <h1>Preparez | Meal Planning App</h1>
+                    <p>A recipe sharing app to help with deciding whats for dinner!</p>
                     </div>
                     <div className="col-6"><p>{localStorage.getItem('name')!==null && ('Hi,'+this.state.username) } </p></div>
                 </div>
