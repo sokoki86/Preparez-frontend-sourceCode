@@ -6,7 +6,7 @@ class RecipeBox extends Component {
         return(
         <div className="recipebox">
             <div className="recipebuttons">
-               <Link push to='/newrecipe'><button>Create New Recipe</button></Link>
+               <Link push to='/newrecipe'><button>Create</button></Link>
               
                
             </div>

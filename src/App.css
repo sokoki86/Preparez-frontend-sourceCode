@@ -1,5 +1,4 @@
 main {
-    width: 95%;
     max-width: 120rem;
     display: flex;
     flex-direction: column;
@@ -11,8 +10,8 @@ main {
   } */
 /* small screens phones */
   @media screen and (min-width: 620px){
-    .flex-container {
-      width: 500px;
+  button {
+    width: 40%,
   }
 }
   

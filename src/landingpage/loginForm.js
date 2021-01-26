@@ -6,7 +6,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import { Redirect } from "react-router-dom";
   import 'react-toastify/dist/ReactToastify.css';
 class LoginForm extends Component {
-    //  history = useHistory();
     constructor(props) {
         super(props);
         this.state = {
@@ -17,14 +16,8 @@ class LoginForm extends Component {
           redirect:false
         };
       }
-      componentDidMount() {
-        fetch('https://serene-mesa-65774.herokuapp.com/')
-        .then(response => response.json())
-      }
-
+      
      onChangeForm(e){
-         console.log('OnChnageeee');
-         console.log(e.target.value);
         // let user = this.state.user
         if (e.target.name === 'username') {
             this.setState({
@@ -41,9 +34,7 @@ class LoginForm extends Component {
       }
       onSubmit(event){
         event.preventDefault();
-          console.log(this.state);
           login(this.state).then(res=>{
-              console.log(res);
               localStorage.setItem('name',this.state.username);
               this.setState({
                 username:'',
@@ -56,10 +47,8 @@ class LoginForm extends Component {
               }) 
               }, 1000);
               
-            //   history.push("/recipePage");
           },err=>{
             toast.error("Username or password is incorrect!");
-              console.log(err);
           })
       }
     
@@ -83,7 +72,7 @@ class LoginForm extends Component {
                     <br/>
                     <label htmlFor="name">Password: </label>
                     <br/>
-                    <input name="password" value={this.state.password} onChange={(e) => this.onChangeForm(e)} id="password"/>
+                    <input type="password" name="password" value={this.state.password} onChange={(e) => this.onChangeForm(e)} id="password"/>
                     <br/>
                     <br/>
                     <button type="submit">Login</button>

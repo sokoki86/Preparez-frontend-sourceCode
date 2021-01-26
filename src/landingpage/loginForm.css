@@ -1,27 +1,34 @@
 .main_form {
-    flex: 4;
-    text-align: center; 
-    margin: 50px 50px;
-  }
-  .form_box {
-      border-width: 2px;
-      border-style: solid;
-      border-color: #83C5BE;
-      background-color: #83C5BE;
-      border-radius: 30px;
-      margin: 50px 50px;
-      color:  #EDF6F9;
-      box-shadow: 5px 10px #D6D2D2;
-      
-  }
-  /* .login {
+  flex: 4;
+  text-align: center;
+  margin: 50px 50px;
+}
+.form_box {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #83c5be;
+  background-color: #83c5be;
+  border-radius: 30px;
+  margin: 50px 50px;
+  position: center;
+  width: 60%;
+  color: #edf6f9;
+  box-shadow: 5px 10px #d6d2d2;
+}
+/* .login {
       background-color: #EDF6F9;
   } */
 
-  button {
-      height: 30px;
-      width: 80px;
-      border-radius: 30px;
-  }
+button {
+  width: 40%;
+  border-radius: 30vh;
+}
 
-  
+.main_form input {
+  width: 30%;
+}
+@media screen and (max-width: 620px){
+    .main_form input {
+        width: 40%;
+      }
+ }

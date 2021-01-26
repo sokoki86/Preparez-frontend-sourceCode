@@ -63,9 +63,7 @@ class CreateRecipeForm extends Component {
       }
       onSubmit(event){
         event.preventDefault();
-          console.log(this.state);
           createRecipes(this.state).then(res=>{
-              console.log(res);
               this.setState({
                 recipe_name:'',
             recipe_preptime:'',
@@ -76,7 +74,6 @@ class CreateRecipeForm extends Component {
               toast.success("Successfully Recipe Created!");
           },err=>{
             toast.error("Something Went Wrong");
-              console.log(err);
           })
       }
     render(){
@@ -105,19 +102,31 @@ class CreateRecipeForm extends Component {
                     <label htmlFor="Category"><u>Please choose a category</u></label>
                     <br/>
                     <label htmlFor="Vegetarian" id="veggie" >Vegetarian</label>
+                    <br/>
                     <input type="radio" id="category" onChange={(e) => this.onChangeForm(e)} name="category" value="Vegetarian"/>
+                    <br/>
                     <label htmlFor="breakfast" id="breakfast" >Breakfast</label>
+                    <br/>
                     <input type="radio" id="category" onChange={(e) => this.onChangeForm(e)} name="category" value="Breakfast"/>
+                    <br/>
                     <label htmlFor="Dinner" id="dinner"  >Dinner</label>
+                    <br/>
                     <input type="radio" id="category" name="category" onChange={(e) => this.onChangeForm(e)} value="Dinner"/>
+                    <br/>
                     <label htmlFor="Sides" id="sides" >Side Dish</label>
+                    <br/>
                     <input type="radio" id="category" name="category" onChange={(e) => this.onChangeForm(e)}  value="Sides"/>
                     <br/>
                     <label htmlFor="Soups" id="soups" >Soups</label>
+                    <br/>
                     <input type="radio" id="category" onChange={(e) => this.onChangeForm(e)} name="category" value="Soups"/>
+                    <br/>
                     <label htmlFor="Snacks" id="snacks" >Snacks</label>
+                    <br/>
                     <input type="radio" id="category" onChange={(e) => this.onChangeForm(e)} name="category" value="Snacks"/>
+                    <br/>
                     <label htmlFor="Desserts" id="desserts" >Desserts</label>
+                    <br/>
                     <input type="radio" id="category" onChange={(e) => this.onChangeForm(e)} name="category" value="Desserts"/>
                     <br/>
                     <br/>

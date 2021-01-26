@@ -13,3 +13,9 @@ main {
   max-width: 120rem;
   margin: 0 auto;
 }
+
+/* @media screen and (min-width: 620px){
+  .logout {
+    background-color: #EDF6F9;
+  }
+} */

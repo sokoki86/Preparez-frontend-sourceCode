@@ -26,7 +26,6 @@ class LandingPage extends Component {
         <Route path='/newrecipe' component={CreateRecipeForm} />
         <Route path='/editrecipe' component={EditRecipeForm} />
         <Route path='/recipecard'  render={(props) => <RecipeCard {...props}/>} />
-        {/* <img className='image'src={food} alt="food" height={700} width={600}/> */}
         </main>
       </div>
     );

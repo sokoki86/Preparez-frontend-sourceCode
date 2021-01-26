@@ -9,7 +9,7 @@
       border-color: #83C5BE;
       background-color: #83C5BE;
       border-radius: 30px;
-      margin: 50px 50px;
+      /* margin: 50px 50px; */
       color:  #EDF6F9;
       
       
@@ -20,8 +20,8 @@
 
   button {
       text-align: center;
-      height: 30px;
-      width: 140px;
+      height: 30%;
+      width: 30%;
       border-radius: 30px;
       margin-left: 15px;
   }
@@ -29,3 +29,9 @@
   h3 {
       text-align: center;
   }
+
+  @media screen and (max-width: 620px){
+   button {
+        width: 60%
+   } 
+}

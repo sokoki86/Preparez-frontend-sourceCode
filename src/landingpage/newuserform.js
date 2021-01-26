@@ -16,14 +16,10 @@ class NewUserForm extends Component {
       }
 
      onChangeForm(e){
-         console.log('OnChnageeee');
-         console.log(e.target.value);
-        // let user = this.state.user
         if (e.target.name === 'fullname') {
             this.setState({
                 fullname:e.target.value
             })
-          //user.boothname = e.target.value;
           
         } else if (e.target.name === 'username') {
             this.setState({
@@ -45,9 +41,7 @@ class NewUserForm extends Component {
       }
       onSubmit(event){
         event.preventDefault();
-          console.log(this.state);
           register(this.state).then(res=>{
-              console.log(res);
               this.setState({
                 fullname:'',
                 email:'',
@@ -57,7 +51,6 @@ class NewUserForm extends Component {
               toast.success("Successfully Registered!");
           },err=>{
             toast.error("User Already Exist/Server may be not Responding");
-              console.log(err);
           })
       }
     render(){
