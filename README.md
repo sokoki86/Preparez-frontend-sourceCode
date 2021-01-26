@@ -2,8 +2,10 @@ Preprez
 
 Preparez is a recipe sharing app that allows users to add, delete, and edit recipes shared with other users on the platform.
 For Demo purposes you can use the dummy user:
+
 username:Penny
-password:Happy
+
+password:happy
 
 A live link to this app can be found here
 https://preparez-frontend-source-code.vercel.app/
@@ -34,7 +36,7 @@ Users can edit and delete recipes as well
 ![editrecipepage](https://user-images.githubusercontent.com/69558954/105537047-5638bd00-5cbf-11eb-99bd-d2692889207e.png)
 
 
-Preparez was created using React for the client side,  express for the server, PostgreSQL for the database, and Node.js.
+Preparez was created using React for the client side,  express for the server, PostgreSQL for the database, and Node.js, axios was used for the calls and redux for state management.
 
 
 
